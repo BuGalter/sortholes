@@ -1,11 +1,14 @@
 function countHolesNumber(currentNumber: number): number {
-  let currentNumberStr: string = String(currentNumber);
-  //console.log(currentNumberStr);
-  let numberHoles: number = currentNumberStr.length;
-  for (let i:number = 0; i < currentNumberStr.length; i += 1) {
-    if (currentNumberStr[i] === '8') {
-      numberHoles += 1;
+  let numberHoles: number = 0;
+  let wholeRart: number = currentNumber;
+  let remainder: number;
+  while (wholeRart != 0) {
+    remainder = wholeRart % 10;
+    wholeRart = Math.trunc(wholeRart / 10);
+    if (remainder === 8) {
+      numberHoles += 2; 
     };
+    numberHoles += 1;
   };
   return numberHoles;
 };
@@ -31,7 +34,7 @@ function sortNumbersHoles(sortArray: number[]): number[] {
   return sortArray;
 };
 
-let testArray: number[] = [88, 444, 400, 666, 999, 44, 4];
+let testArray: number[] = [888, 44444, 88, 666, 99, 0];
 
 console.log(testArray);
 console.log(sortNumbersHoles(testArray));
