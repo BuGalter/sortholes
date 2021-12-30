@@ -35,6 +35,7 @@ function sortNumbersHoles(sortArray: number[]): number[] {
 };
 
 let testArray: number[] = [888, 44444, 88, 666, 99, 0];
+// sortArray = [0, 99, 666, 88, 44444, 888]
 
 console.log(testArray);
 console.log(sortNumbersHoles(testArray));
