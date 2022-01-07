@@ -16,6 +16,7 @@ function countHolesNumber(currentNumber) {
         wholeRart = Math.trunc(wholeRart / 10);
         if (remainder === 8) {
             numberHoles += 2;
+            continue;
         }
         ;
         numberHoles += 1;
@@ -55,6 +56,7 @@ function sortNumbersHoles(sortArray) {
     return sortArray;
 }
 ;
-let testArray = [888, 44444, 88, 666, 99, 0]; // sortArray = [0, 99, 666, 88, 44444, 888]
+let testArray = [469089, 888, 44444, 4444, 86, 8, 9, 0];
+// sortArray = [0, 9, 8, 86, 4444, 44444, 888, 469089]
 console.log('Тестовый массив: ' + testArray);
 console.log('Отсортированный массив: ' + sortNumbersHoles(testArray));
