@@ -1,4 +1,15 @@
+
+/**
+ * sortholes module.
+ * @module testtask-sortholes/index
+ */
+
 function countHolesNumber(currentNumber: number): number {
+  /**
+   * The function returns number of holes.
+   * @param {number} currentNumber - Number.
+   * @return {number} numberHoles - Number of holes.
+   */
   let numberHoles: number = 0;
   let wholeRart: number = currentNumber;
   let remainder: number;
@@ -14,6 +25,11 @@ function countHolesNumber(currentNumber: number): number {
 };
 
 function sortNumbersHoles(sortArray: number[]): number[] {
+  /**
+   * The function returns sorted arrays of numbers.
+   * @param {Array<number>} sortArray - Array of numbers to sort.
+   * @return {Array<number>} sortArray - Sorted array of numbers.
+   */
   let tempArray: Array<number[]> = [];
   for (let i: number = 0; i < sortArray.length; i += 1) {
     let numHoles: number = countHolesNumber(sortArray[i]);
